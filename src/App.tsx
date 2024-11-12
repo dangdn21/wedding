@@ -9,11 +9,28 @@ import { Information } from "./component/information"
 import { GuestBook } from "./component/guestbook"
 import { LazyDiv } from "./component/lazyDiv"
 import { ShareButton } from "./component/shareButton"
+import ReactAudioPlayer from 'react-audio-player';
+
 
 function App() {
   return (
     <div className="background">
-      {/* <BGEffect /> */}
+      <BGEffect />
+      <div
+        style={{
+          zIndex: 9999,
+          position: "fixed",
+          bottom: 0,
+        }}
+      >
+        <ReactAudioPlayer
+          src="/wedding/music/sound.mp3"
+          autoPlay
+          controls
+          loop
+        />
+      </div>
+      
       <div className="card-view">
         <LazyDiv className="card-group">
           <Cover />
