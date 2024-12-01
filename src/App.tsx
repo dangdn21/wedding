@@ -91,7 +91,7 @@ function App() {
           <Location />
         </LazyDiv>
 
-        <LazyDiv className="card-group">
+        <LazyDiv className="card-group" style={{ zIndex: 10}}>
           <GuestBook posts={posts} />
           <FormSubmit onUpdatePosts={handleUpdatePosts} />
         </LazyDiv>
