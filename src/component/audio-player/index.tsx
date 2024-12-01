@@ -28,8 +28,8 @@ export const AudioPlayer = () => {
         zIndex: 9999,
         position: "fixed",
         bottom: 0,
-        right: 24,
-        width: 100,
+        right: 0,
+        width: 60,
       }}
     >
       <div style={{
