@@ -33,7 +33,7 @@ export const Map = () => {
 
   return (
     <div className="map-wrapper">
-    <GoogleMapReact
+    {/* <GoogleMapReact
       yesIWantToUseGoogleMapApiInternals
       resetBoundsOnResize
       bootstrapURLKeys={{
@@ -48,10 +48,9 @@ export const Map = () => {
       defaultCenter={DEFAULT_CENTER}
       center={latLng}
       defaultZoom={14}
-    // onClick={handleMapClick}
     >
-      {/* <AnyReactComponent lat={address_lat} lng={address_lng} /> */}
-    </GoogleMapReact>
+      <AnyReactComponent lat={address_lat} lng={address_lng} />
+    </GoogleMapReact> */}
     </div>
   )
 }

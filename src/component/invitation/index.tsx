@@ -1,10 +1,12 @@
 import { LazyDiv } from "../lazyDiv"
 import coverImage from "../../image/cover.jpg"
 import { Gallery } from "react-grid-gallery";
+import image6 from "../../image/gallery/image6.jpg"
+import image37 from "../../image/gallery/image37.jpg"
 
 const images = [
   {
-    src: coverImage,
+    src: image6,
     width: 120,
     height: 120,
     alt: "Mang Den Stories"
@@ -16,7 +18,7 @@ const images = [
     alt: "Mang Den Stories"
   },
   {
-    src: coverImage,
+    src: image37,
     width: 120,
     height: 120,
     alt: "Mang Den Stories"
