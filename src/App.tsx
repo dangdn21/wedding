@@ -9,14 +9,13 @@ import { GridGallery } from "./component/grid-gallery"
 import { FormSubmit } from "./component/form-submit"
 import { GuestBook } from "./component/guestbook"
 import { LazyDiv } from "./component/lazyDiv"
-import { ShareButton } from "./component/shareButton"
 import ReactAudioPlayer from 'react-audio-player';
 
 
 function App() {
   return (
     <div className="background">
-      {/* <BGEffect /> */}
+      <BGEffect />
       <div
         style={{
           zIndex: 9999,
@@ -55,7 +54,6 @@ function App() {
           <FormSubmit />
         </LazyDiv>
 
-        {/* <ShareButton /> */}
       </div>
     </div>
   )
