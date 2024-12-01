@@ -1,8 +1,8 @@
 import { Map } from "./map"
 import { LazyDiv } from "../lazyDiv"
 import { Button } from "../button"
-import ImageNhaTrai from "../../image/address/1.png"
-import ImageNhaGai from "../../image/address/2.png"
+import ImageNhaTrai from "../../image/address/1.jpg"
+import ImageNhaGai from "../../image/address/2.jpg"
 
 
 export const Location = () => {

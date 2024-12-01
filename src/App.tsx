@@ -81,7 +81,7 @@ function App() {
 
         <LazyDiv className="card-group">
           <Invitation />
-          <GridGallery title="Mang Den Stories" />
+          <GridGallery title="Măng Đen - The place where the love story begins" />
         </LazyDiv>
         <LazyDiv className="card-group">
           <Gallery title="Gallery" />

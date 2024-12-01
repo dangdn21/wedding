@@ -96,6 +96,9 @@ const IMAGES = [
   // image42,
   image43,
 ]
+// random images 
+const RandomImages = IMAGES.sort(() => Math.random() - 0.5)
+
 
 const GridImages = [
   {
@@ -179,7 +182,7 @@ export const Gallery = ({ title }: { title: string }) => {
             content: (
               <>
                 <div className="photo-list">
-                  {IMAGES.map((image, idx) => (
+                  {RandomImages.map((image, idx) => (
                     <img
                       key={idx}
                       src={image}
