@@ -26,7 +26,10 @@ export const GuestBook = ({ posts }: { posts: Post[]}) => {
             </div>
             <div className="body">
               <div className="title">
-                <div className="name">{post.name}</div>
+                <div className="name" style={{
+                  fontWeight: 700,
+                  fontSize: 18
+                }}>{post.name}</div>
                 <div className="date" style={{
                   textTransform: "capitalize",
                 }}>
