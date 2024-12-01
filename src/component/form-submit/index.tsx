@@ -118,7 +118,8 @@ export const FormSubmit = ({ onUpdatePosts }: any) => {
             <Button style={{
               display: "flex",
               justifyContent: "center",
-              alignItems: "center"
+              alignItems: "center",
+              cursor: "pointer",
             }} type="submit" disabled={loading}>
               {loading && (
                 <div style={{
@@ -152,7 +153,7 @@ export const FormSubmit = ({ onUpdatePosts }: any) => {
                 </div>
               )}
              
-              Gửi
+              Gửi lời chúc <span role="img" aria-label="heart">❤️</span>
             </Button>
           </div>
         </form>
