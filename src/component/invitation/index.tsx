@@ -1,28 +1,33 @@
-import { Fragment } from "react/jsx-runtime"
-import {
-  BRIDE,
-  BRIDE_INFO,
-  BRIDE_FATHER,
-  BRIDE_MOTHER,
-  GROOM,
-  GROOM_INFO,
-  GROOM_FATHER,
-  GROOM_MOTHER,
-  GROOM_TITLE,
-  BRIDE_TITLE,
-} from "../../const"
-import { useModal } from "../../component/store"
-import { Button } from "../button"
 import { LazyDiv } from "../lazyDiv"
-import { ReactComponent as PhoneIcon } from "../../image/phone-flip-icon.svg"
+import coverImage from "../../image/cover.jpg"
+import { Gallery } from "react-grid-gallery";
+
+const images = [
+  {
+    src: coverImage,
+    width: 120,
+    height: 120,
+    alt: "Mang Den Stories"
+  },
+  {
+    src: coverImage,
+    width: 120,
+    height: 120,
+    alt: "Mang Den Stories"
+  },
+  {
+    src: coverImage,
+    width: 120,
+    height: 120,
+    alt: "Mang Den Stories"
+  },
+];
 
 export const Invitation = () => {
-  const { openModal, closeModal } = useModal()
   return (
     <LazyDiv className="card invitation">
       <h2 className="english">Invitation</h2>
 
-      <div className="break" />
       <div className="content">Vượt qua bao thử thách,</div>
       <div className="content">Vượt bao khó khăn là mỗi bước ta gần nhau,</div>
       <div className="content">Giận hờn ta lại tìm cách tha thứ,</div>
@@ -35,84 +40,14 @@ export const Invitation = () => {
       <div className="content">Chúc tình yêu chúng ta bền vững, hạnh phúc trọn đời.</div>
 
       <div className="break" />
-
-      <div className="name">
-        {GROOM_FATHER} · {GROOM_MOTHER}
-        <span className="relation">
-          <span className="relation-name">{GROOM_TITLE}</span>
-        </span>{" "}
-        {GROOM}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+        <Gallery images={images} />
       </div>
-      <div className="name">
-        {BRIDE_FATHER} · {BRIDE_MOTHER}
-        <span className="relation">
-          <span className="relation-name">{BRIDE_TITLE}</span>
-        </span>{" "}
-        {BRIDE}
-      </div>
-
-      <div className="break" />
-
-      <Button
-        onClick={() => {
-          openModal({
-            className: "contact-modal",
-            closeOnClickBackground: true,
-            header: (
-              <div className="title-group">
-                <div className="title">Thông tin liên hệ</div>
-              </div>
-            ),
-            content: (
-              <>
-                <div className="contact-info">
-                  {GROOM_INFO.map(({ relation, name, phone }) => (
-                    <Fragment key={relation}>
-                      <div className="relation">{relation}</div>
-                      <div>{name}</div>
-                      <div>
-                        <PhoneIcon
-                          className="flip icon"
-                          onClick={() => {
-                            window.open(`tel:${phone}`, "_self")
-                          }}
-                        />
-                      </div>
-                    </Fragment>
-                  ))}
-                </div>
-                <div className="contact-info">
-                  {BRIDE_INFO.map(({ relation, name, phone }) => (
-                    <Fragment key={relation}>
-                      <div className="relation">{relation}</div>
-                      <div>{name}</div>
-                      <div>
-                        <PhoneIcon
-                          className="flip icon"
-                          onClick={() => {
-                            window.open(`tel:${phone}`, "_self")
-                          }}
-                        />
-                      </div>
-                    </Fragment>
-                  ))}
-                </div>
-              </>
-            ),
-            footer: (
-              <Button
-                buttonStyle="style2"
-                className="bg-light-grey-color text-dark-color"
-                onClick={closeModal}
-              >
-                Đóng
-              </Button>
-            ),
-          })
-        }}
-      >
-        Thông tin liên hệ
-      </Button>
+     
     </LazyDiv>
   )
 }

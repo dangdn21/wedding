@@ -5,7 +5,8 @@ import { BGEffect } from "./component/bgEffect"
 import { Invitation } from "./component/invitation"
 import { Calendar } from "./component/calendar"
 import { Gallery } from "./component/gallery"
-import { Information } from "./component/information"
+import { GridGallery } from "./component/grid-gallery"
+import { FormSubmit } from "./component/form-submit"
 import { GuestBook } from "./component/guestbook"
 import { LazyDiv } from "./component/lazyDiv"
 import { ShareButton } from "./component/shareButton"
@@ -15,7 +16,7 @@ import ReactAudioPlayer from 'react-audio-player';
 function App() {
   return (
     <div className="background">
-      <BGEffect />
+      {/* <BGEffect /> */}
       <div
         style={{
           zIndex: 9999,
@@ -34,12 +35,15 @@ function App() {
       <div className="card-view">
         <LazyDiv className="card-group">
           <Cover />
-          <Invitation />
+          <Calendar />
         </LazyDiv>
 
         <LazyDiv className="card-group">
-          <Calendar />
-          <Gallery />
+          <Invitation />
+          <GridGallery title="Mang Den Stories" />
+        </LazyDiv>
+        <LazyDiv className="card-group">
+          <Gallery title="Gallery" />
         </LazyDiv>
 
         <LazyDiv className="card-group">
@@ -47,11 +51,11 @@ function App() {
         </LazyDiv>
 
         <LazyDiv className="card-group">
-          <Information />
           <GuestBook />
+          <FormSubmit />
         </LazyDiv>
 
-        <ShareButton />
+        {/* <ShareButton /> */}
       </div>
     </div>
   )

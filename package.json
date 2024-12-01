@@ -46,6 +46,9 @@
   },
   "packageManager": "yarn@4.1.0",
   "devDependencies": {
-    "@types/eslint": "^8"
+    "@types/eslint": "^8",
+    "@types/google-map-react": "^2",
+    "google-map-react": "^2.2.1",
+    "react-grid-gallery": "^1.0.1"
   }
 }

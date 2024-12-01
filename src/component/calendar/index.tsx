@@ -10,7 +10,7 @@ export const Calendar = () => {
 
   const dayDiff = useMemo(() => {
     const dayOffset = WEDDING_DATE.diff(WEDDING_DATE.startOf("day"))
-    return Math.ceil((tsDiff - dayOffset) / 1000 / 60 / 60 / 24)
+    return Math.ceil((tsDiff - dayOffset) / 1000 / 60 / 60 / 24) - 1
   }, [tsDiff])
 
   useEffect(() => {
@@ -124,7 +124,7 @@ export const Calendar = () => {
           <span>:</span>
           <div className="count">{diffs.seconds}</div>
         </div>
-        <div style={{ marginTop: "16px"}}>
+        <div style={{ marginTop: "16px", textTransform: 'capitalize', fontFamily: 'Poppins'}}>
           {WEDDING_DATE.format("dddd, DD MMMM YYYY")}
         </div>
         <div className="message">
