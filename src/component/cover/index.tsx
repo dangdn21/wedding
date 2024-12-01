@@ -8,7 +8,14 @@ export const Cover = () => {
     <LazyDiv className="card cover">
       <div className="subtitle">Save the date for the wedding of</div>
       <div className="names">
+        {GROOM}
+        <span role="img" aria-label="heart">❤️</span>
+        {BRIDE}
       </div>
+      <div className="break" />
+      <div className="break" />
+      <div className="break" />
+      <div className="break" />
       <div className="image-wrapper">
         <img src={coverImage} alt="sample" />
       </div>
